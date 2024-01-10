@@ -22,8 +22,24 @@ let paddle2Speed = 1;
 }
 
 //functions
+//function to start the game
 function startGame() {
-}
+    clearInterval(gameTimer); //clears the existing game timer, if any
+    seconds = 0;
+    timerDisplay.innerText = '0s';
+    
+    //sets the initial ball position
+    ballX = Math.random() * 400;
+    ballY = 100;
+    
+    //sets initial paddle positions
+    paddle1Y = 80;
+    paddle2Y = 80;
+    
+    //calls the function to initiate the game
+    gameTimer = setInterval(updateGame, 16);
+    }
+
 function updateGame() {
 }
 function movePaddles() {
@@ -40,3 +56,6 @@ function endGame() {
 }
 function updateTimer() {
 }
+
+//calls function to initiate the game
+startGame();
