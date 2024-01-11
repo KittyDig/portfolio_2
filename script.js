@@ -40,8 +40,13 @@ function startGame() {
     gameTimer = setInterval(updateGame, 16);
     }
 
-function updateGame() {
-}
+    function updateGame() {
+        movePaddles();
+        moveBall();
+        checkCollision();
+        updateTimer();
+    }
+    
 function movePaddles() {
 }
 function updatePaddlePosition() {
