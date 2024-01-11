@@ -66,15 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function updateScore() {
     }
-    function endGame() {
-    }
+        //function to end the game
+        function endGame() {
+            clearInterval(gameTimer);
+            seconds = 0;
+            timerDisplay.innerText = '0s';
+            //I have to add more stuff here message etc...
+        }
     function updateTimer() {
     }
-    //clamp function keeps the paddle in the right game arena
+    
         function clamp(value, min, max) {
             return Math.min(Math.max(value, min), max);
         }
     
-        //calls startGame() to initiate the game
+        // Call startGame() to initiate the game
         startGame();
     });
