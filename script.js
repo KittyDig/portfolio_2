@@ -48,6 +48,10 @@ function startGame() {
     }
     
 function movePaddles() {
+        //move the users left paddle based on mouse position
+        document.addEventListener('mousemove', function (event) {
+            paddle1Y = clamp(event.clientY - document.getElementById('game-container').offsetTop - paddle1.clientHeight / 2, 0, 200 - paddle1.clientHeight);
+        });
 }
 function updatePaddlePosition() {
 }
