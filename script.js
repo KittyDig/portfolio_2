@@ -83,7 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
     //update the balls position
     ball.style.left = ballX + "px";
     ball.style.top = ballY + "px";
-    //need to add goal ability and resetting position of ball
+
+    //check if the ball goes beyond the paddles, and if it does, add a point to the respective player
+    if (ballX < 0 || ballX + ball.clientWidth > 400) {
+      if (ballX < 0) {
+        //update player 2 score
+        updateScore(2);
+      } else {
+        //update player 1 score
+        updateScore(1);
+      }
+    }
   }
 
   function checkCollision() {}
