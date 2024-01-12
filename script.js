@@ -75,8 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
         paddle2.style.top = paddle2Y + 'px';
     }
     
+    //function to move the ball
     function moveBall() {
+        //updates the balls speed based on its position
+        ballX += ballSpeedX;
+        ballY += ballSpeedY;
+
+        //update the balls position  
+        ball.style.left = ballX + 'px'; 
+        ball.style.top = ballY + 'px';
+        //need to add goal ability and resetting position of ball
     }
+
     function checkCollision() {
     }
     function updateScore() {
