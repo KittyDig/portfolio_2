@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gameTimer = setInterval(updateGame, 16);
   }
 
+  //function to make the game run as it should
   function updateGame() {
     movePaddles();
     moveBall();
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimer();
   }
 
+  //function for moving both paddles
   function movePaddles() {
     //move the users left paddle based on mouse position
     document.addEventListener("mousemove", function (event) {
@@ -69,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updatePaddlePosition();
   }
 
+  //function to update the paddle position
   function updatePaddlePosition() {
     paddle1.style.top = paddle1Y + "px";
     paddle2.style.top = paddle2Y + "px";
@@ -93,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //update player 1 score
         updateScore(1);
       }
+      //resets ball position after a goal is scored
+      ballX = Math.random() * 400;
+      ballY = 100;
     }
   }
 
