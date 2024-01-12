@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     
     //get elements
-    let ball = document.getElementById('ball');
-    let paddle1 = document.getElementById('paddle1');
-    let paddle2 = document.getElementById('paddle2');
-    let player1Score = document.getElementById('player1-score');
-    let player2Score = document.getElementById('player2-score');
-    let timerDisplay = document.getElementById('timer');
+    const ball = document.getElementById('ball');
+    const paddle1 = document.getElementById('paddle1');
+    const paddle2 = document.getElementById('paddle2');
+    const player1Score = document.getElementById('player1-score');
+    const player2Score = document.getElementById('player2-score');
+    const timerDisplay = document.getElementById('timer');
     
     //sets initial game state
     let winCondition = 3;
