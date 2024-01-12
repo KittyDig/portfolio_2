@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let paddle2Y = 80;
     let paddle2Speed = 1;
      
-    //functions
-    //function to start the game
+    /**functions
+    *function to start the game
+    */
     function startGame() {
         clearInterval(gameTimer); //clears the existing game timer, if any
         seconds = 0;
@@ -52,6 +53,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 paddle1Y = clamp(event.clientY - document.getElementById('game-container').offsetTop - paddle1.clientHeight / 2, 0, 200 - paddle1.clientHeight);
             });
     
+            //move the right paddle automatically depending on where the ball is, need to add ball next to make sure it works
+            if (ballSpeedX > 0) {
+
+                if (ballY < paddle2Y + paddle2.clientHeight / 2) {
+                
+                paddle2Y -= paddle2Speed;
+                
+                } else {
+                
+                paddle2Y += paddle2Speed;
+                
+                }
+                
+                }
             updatePaddlePosition();
     }
     
