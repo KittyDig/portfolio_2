@@ -1,37 +1,39 @@
 body {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 #game-container {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    background-color: #fff;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
 }
 
-#ball, #paddle1, #paddle2 {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #333;
+#ball,
+#paddle1,
+#paddle2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
 }
 
 #paddle1 {
-    left: 0;
+  left: 0;
 }
 
 #paddle2 {
-    right: 0;
+  right: 0;
 }
 
 #score-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
 }
