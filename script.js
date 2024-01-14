@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const timerDisplay = document.getElementById("timer");
 
   //sets initial game state
-  let winCondition = 3;
+  let winCondition = 5;
   let seconds = 0;
   let gameTimer;
   let ballX = Math.random() * 400;
@@ -121,10 +121,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  //function to make game harder for the player
+  function increaseSpeed() {
+    ballSpeedX *= 1.1;
+    paddle2Speed *= 1.1;
+  }
+
   //function to update scores
   function updateScore(player) {
     if (player === 1) {
       player1Score.innerText = parseInt(player1Score.innerText) + 1;
+      increaseSpeed();
     } else {
       player2Score.innerText = parseInt(player2Score.innerText) + 1;
     }
