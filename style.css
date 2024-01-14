@@ -14,12 +14,18 @@ body {
   background-color: #fff;
 }
 
-#ball,
+#ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+}
+
 #paddle1,
 #paddle2 {
   position: absolute;
   width: 20px;
-  height: 20px;
+  height: 40px;
   background-color: #333;
 }
 

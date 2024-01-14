@@ -105,19 +105,38 @@ document.addEventListener("DOMContentLoaded", function () {
   function checkCollision() {
     //checks collision with the top and bottom walls
     if (ballY <= 0 || ballY + ball.clientHeight >= 200) {
-    ballSpeedY = -ballSpeedY;
+      ballSpeedY = -ballSpeedY;
     }
-    
+
     //checks collision with the paddles
     if (
-    (ballX <= 20 && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) ||
-    (ballX + ball.clientWidth >= 380 && ballY >= paddle2Y && ballY <= paddle2Y + paddle2.clientHeight)
+      (ballX <= 20 &&
+        ballY >= paddle1Y &&
+        ballY <= paddle1Y + paddle1.clientHeight) ||
+      (ballX + ball.clientWidth >= 380 &&
+        ballY >= paddle2Y &&
+        ballY <= paddle2Y + paddle2.clientHeight)
     ) {
-    ballSpeedX = -ballSpeedX;
+      ballSpeedX = -ballSpeedX;
     }
+  }
+
+  //function to update scores
+  function updateScore(player) {
+    if (player === 1) {
+      player1Score.innerText = parseInt(player1Score.innerText) + 1;
+    } else {
+      player2Score.innerText = parseInt(player2Score.innerText) + 1;
     }
-    
-  function updateScore() {}
+
+    if (
+      parseInt(player1Score.innerText) === winCondition ||
+      parseInt(player2Score.innerText) === winCondition
+    ) {
+      endGame();
+    }
+  }
+
   //function to end the game
   function endGame() {
     clearInterval(gameTimer);
