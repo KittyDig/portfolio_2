@@ -3,8 +3,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 100vh;
   background-color: #f0f0f0;
+}
+
+#score-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 18px;
+  width: 100%;
 }
 
 #game-container {
@@ -12,6 +21,7 @@ body {
   width: 400px;
   height: 200px;
   background-color: #fff;
+  margin-top: 10px;
 }
 
 #ball {
@@ -35,11 +45,4 @@ body {
 
 #paddle2 {
   right: 0;
-}
-
-#score-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  font-size: 18px;
 }
