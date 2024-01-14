@@ -16,6 +16,14 @@ body {
   width: 100%;
 }
 
+#player2-score {
+  margin-right: 40%;
+}
+
+#player1-score {
+  margin-left: 40%;
+}
+
 #game-container {
   position: relative;
   width: 400px;
