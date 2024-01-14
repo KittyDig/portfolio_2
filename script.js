@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     timerDisplay.innerText = "0s";
 
     //sets the initial ball position
-    ballX = Math.random() * 400;
-    ballY = 100;
+    ballX = 400;
+    ballY = Math.random() * 400;
 
     //sets initial paddle positions
     paddle1Y = 80;
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
         updateScore(1);
       }
       //resets ball position after a goal is scored
-      ballX = Math.random() * 800;
-      ballY = 100;
+      ballX = 400;
+      ballY = Math.random() * 400;
     }
   }
 
