@@ -26,8 +26,8 @@ body {
 
 #game-container {
   position: relative;
-  width: 400px;
-  height: 200px;
+  width: 800px;
+  height: 400px;
   background-color: #fff;
   margin-top: 10px;
 }
@@ -43,7 +43,7 @@ body {
 #paddle1,
 #paddle2 {
   position: absolute;
-  width: 20px;
+  width: 15px;
   height: 40px;
   background-color: #333;
 }

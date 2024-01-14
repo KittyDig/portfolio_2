@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.getElementById("game-container").offsetTop -
           paddle1.clientHeight / 2,
         0,
-        200 - paddle1.clientHeight
+        400 - paddle1.clientHeight
       );
     });
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ball.style.top = ballY + "px";
 
     //check if the ball goes beyond the paddles, and if it does, add a point to the respective player
-    if (ballX < 0 || ballX + ball.clientWidth > 400) {
+    if (ballX < 0 || ballX + ball.clientWidth > 800) {
       if (ballX < 0) {
         //update player 2 score
         updateScore(2);
@@ -97,14 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
         updateScore(1);
       }
       //resets ball position after a goal is scored
-      ballX = Math.random() * 400;
+      ballX = Math.random() * 800;
       ballY = 100;
     }
   }
 
   function checkCollision() {
     //checks collision with the top and bottom walls
-    if (ballY <= 0 || ballY + ball.clientHeight >= 200) {
+    if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
       ballSpeedY = -ballSpeedY;
     }
 
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (ballX <= 20 &&
         ballY >= paddle1Y &&
         ballY <= paddle1Y + paddle1.clientHeight) ||
-      (ballX + ball.clientWidth >= 380 &&
+      (ballX + ball.clientWidth >= 780 &&
         ballY >= paddle2Y &&
         ballY <= paddle2Y + paddle2.clientHeight)
     ) {
@@ -144,12 +144,17 @@ document.addEventListener("DOMContentLoaded", function () {
     timerDisplay.innerText = "0s";
     //I have to add more stuff here message etc...
   }
-  function updateTimer() {}
+
+//function to update the timer
+function updateTimer() {
+  seconds++;
+  timerDisplay.innerText = seconds + 's';
+  }
 
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
   }
 
-  // Call startGame() to initiate the game
+  //call startGame() to initiate the game
   startGame();
 });
