@@ -102,7 +102,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function checkCollision() {}
+  function checkCollision() {
+    //checks collision with the top and bottom walls
+    if (ballY <= 0 || ballY + ball.clientHeight >= 200) {
+    ballSpeedY = -ballSpeedY;
+    }
+    
+    //checks collision with the paddles
+    if (
+    (ballX <= 20 && ballY >= paddle1Y && ballY <= paddle1Y + paddle1.clientHeight) ||
+    (ballX + ball.clientWidth >= 380 && ballY >= paddle2Y && ballY <= paddle2Y + paddle2.clientHeight)
+    ) {
+    ballSpeedX = -ballSpeedX;
+    }
+    }
+    
   function updateScore() {}
   //function to end the game
   function endGame() {
