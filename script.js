@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
     clearInterval(gameTimer); //clears the existing game timer, if any
     seconds = 0;
     timerDisplay.innerText = "0s";
+    player1Score.innerText = "0";
+    player2Score.innerText = "0";
+    ballSpeedX = 3;
+    ballSpeedY = 2;
+    paddle2Speed = 1;
 
     //sets the initial ball position
     ballX = 400;
