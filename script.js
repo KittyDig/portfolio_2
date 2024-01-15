@@ -148,11 +148,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //function to end the game
+  function displayModal(message) {
+    const modal = document.getElementById("myModal");
+    const modalMessage = document.getElementById("modalMessage");
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+  }
+  
+  //function to close the modal
+  function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  
+  //function to end the game
   function endGame() {
     clearInterval(gameTimer);
     seconds = 0;
     timerDisplay.innerText = "0s";
-    //I have to add more stuff here message etc...
+  
+    //determine the winner
+    let winner = "";
+    if (parseInt(player1Score.innerText) === winCondition) {
+      winner = "Player 1";
+    } else if (parseInt(player2Score.innerText) === winCondition) {
+      winner = "Player 2";
+    }
+  
+    //display a message using the modal
+    displayModal(winner ? `Congratulations, ${winner} won!` : "Better luck next time!");
+    setTimeout(closeModal, 3000);
   }
 
   let lastUpdateTime = new Date().getTime();
