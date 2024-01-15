@@ -123,8 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //function to make game harder for the player
   function increaseSpeed() {
-    ballSpeedX *= 1.1;
-    paddle2Speed *= 1.1;
+    ballSpeedX *= 1.4;
+    paddle2Speed *= 1.25;
   }
 
   //function to update scores
@@ -152,11 +152,18 @@ document.addEventListener("DOMContentLoaded", function () {
     //I have to add more stuff here message etc...
   }
 
+  let lastUpdateTime = new Date().getTime();
+
+
 //function to update the timer
 function updateTimer() {
-  seconds++;
-  timerDisplay.innerText = seconds + 's';
+  const currentTime = new Date().getTime();
+  if (currentTime - lastUpdateTime >= 1000) {
+    seconds++;
+    timerDisplay.innerText = seconds + 's';
+    lastUpdateTime = currentTime;
   }
+}
 
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
