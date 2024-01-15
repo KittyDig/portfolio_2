@@ -56,7 +56,7 @@ body {
   right: 0;
 }
 
-/* pop up */
+/* pop up modal */
 .modal {
   display: none;
   position: fixed;
@@ -87,4 +87,19 @@ body {
 
 .close:hover {
   color: #f2e9e4;
+}
+
+#startButton {
+  background-color: #c9ada7;
+  color: #22223b;
+  padding: 10px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#startButton:hover {
+  background-color: #9a8c98;
 }
