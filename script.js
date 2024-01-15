@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let paddle2Y = 80;
   let paddle2Speed = 1;
 
+    //event listener for the start button
+    document.getElementById("startButton").addEventListener("click", startGame);
+
   /**functions
    *function to start the game
    */
@@ -169,6 +172,4 @@ function updateTimer() {
     return Math.min(Math.max(value, min), max);
   }
 
-  //call startGame() to initiate the game
-  startGame();
 });
