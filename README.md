@@ -52,32 +52,25 @@
 
 ### Accessibility
 
-- Ensured the game is accessible using tools like [axe Accessibility Checker](https://www.deque.com/axe/).
 
 ## Bugs/Issues
 
 ### Fixed
 
-- Describe bugs or issues that have been resolved.
 
 ### Unfixed
 
-- List any known bugs or issues that are yet to be fixed.
+## Deployment
 
-## Deployment    
-
-- Deployed the game to a hosting platform.
+- Deployed the game to github pages.
 
 ## Credits
 
 ### Media
 
-- Provide credits for any media used in the project.
 
 ### Code
 
-- Acknowledge any third-party code or libraries used.
+
 
 ## Acknowledgements
-
-- Mention any individuals or resources that contributed to the project.
