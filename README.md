@@ -4,8 +4,17 @@
 
 ### User Stories
 
+![Gameplay Screenshot](/path/to/screenshot.png)
+
 - As a player, I want to be able to play the Pong game on various devices, including mobile, tablet, and desktop, to ensure a seamless gaming experience.
 - The game plays slightly different on mobile or tablet as the user has to tap where they want to paddle, but this is just as playable as the PC version.
+- I wanted this game to be playable by a wide variety of audiences, from people with no gaming experience to people who play a lot of video games.
+- I achieved this by making a very easy to understand game with a very basic learning curve.
+
+## Installation
+
+1. Clone the repository.
+2. Open the `index.html` file in your web browser.
 
 ## Design
 
@@ -26,15 +35,18 @@
 
 ### Homepage
 
-- Briefly describe the features on the homepage.
+- The homepage is the only page of the website, it features the header, game arena, paddles, ball, start button and footer.
 
 ### Footer
 
-- Include any additional features in the footer.
+- The footer is basic, with the game name and year.
 
 ### Gameplay
 
-- The game includes a Pong game interface with paddles, a ball, and a scoring system.
+- The game includes a pong game interface with paddles, a ball, and a scoring system.
+- The paddles are controlled by the users mouse in the PC version, and by tapping the screen on the tablet and mobile version.
+- The right paddle is computer operated, following the ball, rather than being a generic up and down defence system, which makes the game slightly more difficult.
+- The game gets increasingly difficult for the player if they score a point by speeding up the ball and the right paddle, the game difficulty does not change if the computer scores a point.
 
 ### Modal
 
@@ -42,7 +54,8 @@
 
 ### Start Button
 
-- A button to initiate the game.
+- A button to initiate the game so the user does not get immediately faced with a running game.
+- This button can also be used to restart a game during a match.
 
 ## Technologies Used
 
@@ -55,11 +68,14 @@
 ### User Testing
 
 - Conducted user testing with my cousin, who played the game on an iPad. The game was successfully played on mobile, tablet, and desktop, ensuring a versatile user experience.
+- She enjoyed the game and found it to not be too difficult, but it had enough challenge for her to play a few rounds of the game.
 
 ### Validator
 
 - HTML: [W3C HTML Validator](https://validator.w3.org/)
 - CSS: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- JS: [JSHint](https://jshint.com/)
+- The code passed all of these scans with no errors or offers of improvement.
 
 ### Lighthouse
 
@@ -67,18 +83,23 @@
 
 ### Accessibility
 
-- Ensured the game is accessible on various devices and passed accessibility checks using tools like [axe Accessibility Checker](https://www.deque.com/axe/).
+- Ensured the game is accessible on various devices and passed accessibility checks using tools like [Accessibility Checker](https://www.accessibilitychecker.org/).
+- This tool found no critical issues.
 
 ## Bugs/Issues
 
 ### Fixed
 
+- I dealt with quite a few bugs during this process, mainly to do with collision and the size of the arena. When the arena was resized, it would hit an invisible line in the middle of the arena.
+- I began the project with an arena size of 400px x 200px, this led to great difficulty when readjusting for a larger arena as there was a line of code I kept overlooking 'if (ballX < 0 || ballX + ball.clientWidth > 800)'. When I realised this line was causing the issues, it was a great relief and this bug was fixed.
 
 ### Unfixed
 
+-There is a bug that can occur if the ball hits the paddle at a very certain angle. The ball jitters along the paddle then bounces off the paddle. I did not have enough time to delve further into this bug so it has not yet been fixed but I would like to spend more time on this project and find out how to fix this.
+
 ## Deployment
 
-- Deployed the game to github pages.
+- Deployed the game to github pages, https://kittydig.github.io/portfolio_2/
 
 ## Credits
 

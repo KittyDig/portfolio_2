@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-    //move the right paddle automatically depending on where the ball is, need to add ball next to make sure it works
+    //move the right paddle automatically depending on where the ball is.
     if (ballSpeedX > 0) {
       if (ballY < paddle2Y + paddle2.clientHeight / 2) {
         paddle2Y -= paddle2Speed;
