@@ -1,39 +1,83 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pong Game
 
-Welcome,
+## User Experience
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### User Stories
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Design
 
-## Codeanywhere Reminders
+### Colors
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- Background: #f2e9e4
+- Score Container: #22223b
+- Ball: #9a8c98
+- Paddles: #9a8c98
+- Modal Background: #c9ada7
+- Start Button: #c9ada7 (Normal), #9a8c98 (Hover)
 
-`python3 -m http.server`
+## Features
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Homepage
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### Footer
 
-`http_server`
+### Gameplay
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- The game includes a pong game interface with paddles, a ball, and a scoring system.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Modal
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- A modal is displayed at the end of the game to announce the game result.
 
-To log into the Heroku toolbelt CLI:
+### Start Button
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- A button to initiate the game.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Technologies Used
 
----
+- HTML
+- CSS
+- JavaScript
 
-Happy coding!
+## Testing
+
+### Validator
+
+- HTML: [W3C HTML Validator](https://validator.w3.org/)
+- CSS: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+### Lighthouse
+
+- Conducted Lighthouse audits for performance, accessibility, SEO, and best practices.
+
+### Accessibility
+
+- Ensured the game is accessible using tools like [axe Accessibility Checker](https://www.deque.com/axe/).
+
+## Bugs/Issues
+
+### Fixed
+
+- Describe bugs or issues that have been resolved.
+
+### Unfixed
+
+- List any known bugs or issues that are yet to be fixed.
+
+## Deployment
+
+- Deployed the game to a hosting platform.
+
+## Credits
+
+### Media
+
+- Provide credits for any media used in the project.
+
+### Code
+
+- Acknowledge any third-party code or libraries used.
+
+## Acknowledgements
+
+- Mention any individuals or resources that contributed to the project.
