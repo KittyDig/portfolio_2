@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let paddle2Y = 80;
   let paddle2Speed = 1;
 
-    //event listener for the start button
-    document.getElementById("startButton").addEventListener("click", startGame);
+  //event listener for the start button
+  document.getElementById("startButton").addEventListener("click", startGame);
 
   /**functions
    *function to start the game
@@ -159,47 +159,45 @@ document.addEventListener("DOMContentLoaded", function () {
     modalMessage.textContent = message;
     modal.style.display = "block";
   }
-  
+
   //function to close the modal
   function closeModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
-  
+
   //function to end the game
   function endGame() {
     clearInterval(gameTimer);
     seconds = 0;
     timerDisplay.innerText = "0s";
-  
-  //determine the winner
-  let winner = "";
-  if (parseInt(player1Score.innerText) === winCondition) {
-    winner = "Congratulations, you won!";
-  } else if (parseInt(player2Score.innerText) === winCondition) {
-    winner = "Better luck next time!";
-  }
 
-  //display a message using the modal
-  displayModal(winner);
-  setTimeout(closeModal, 3000);
-}
+    //determine the winner
+    let winner = "";
+    if (parseInt(player1Score.innerText) === winCondition) {
+      winner = "Congratulations, you won!";
+    } else if (parseInt(player2Score.innerText) === winCondition) {
+      winner = "Better luck next time!";
+    }
+
+    //display a message using the modal
+    displayModal(winner);
+    setTimeout(closeModal, 3000);
+  }
 
   let lastUpdateTime = new Date().getTime();
 
-
-//function to update the timer
-function updateTimer() {
-  const currentTime = new Date().getTime();
-  if (currentTime - lastUpdateTime >= 1000) {
-    seconds++;
-    timerDisplay.innerText = seconds + 's';
-    lastUpdateTime = currentTime;
+  //function to update the timer
+  function updateTimer() {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastUpdateTime >= 1000) {
+      seconds++;
+      timerDisplay.innerText = seconds + "s";
+      lastUpdateTime = currentTime;
+    }
   }
-}
 
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
   }
-
 });
