@@ -82,11 +82,20 @@
 
 ## Credits
 
-### Media
+### Design
 
+- Color Palette: [Coolors](https://coolors.co/)
+- Favicon: [Favicon.io](https://favicon.io/)
 
-### Code
+### JavaScript
 
+- [GeeksforGeeks](https://www.geeksforgeeks.org/pong-game-in-javascript/): Provided examples for using pong game logic.
+- [Gist by straker](https://gist.github.com/straker/81b59eecf70da93af396f963596dfdc5): Offered assistance and code snippets for JavaScript.
+- [CodePen by gdube](https://codepen.io/gdube/pen/JybxxZ): Provided additional JavaScript help.
+- [JavaScript Plain English](https://javascript.plainenglish.io/js-tutorial-create-a-ping-pong-game-bc92c9f3011a): Tutorial used for creating the Ping Pong game in JavaScript.
+- [Medium Tutorial](https://medium.com/@muzammal3150/creation-of-ping-pong-game-in-javascript-with-explanation-57a783d8400): Tutorial for creating a Ping Pong game with explanations.
 
 
 ## Acknowledgements
+
+-Thank you to my mentor Spencer for all of the guidance and help with this project!

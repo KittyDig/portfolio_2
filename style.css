@@ -4,14 +4,29 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
   background-color: #f2e9e4;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #c9ada7;
+  color: #22223b;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  border-radius: 40px;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
 }
 
 #score-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 120px;
   font-size: 18px;
   width: 100%;
 }
@@ -102,4 +117,18 @@ body {
 
 #startButton:hover {
   background-color: #9a8c98;
+}
+
+footer {
+  background-color: #c9ada7;
+  color: #22223b;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
 }
