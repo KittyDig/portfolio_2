@@ -1,10 +1,8 @@
 # Pong Game
-
+![Mockup](assets/mockup.png)
 ## User Experience
 
 ### User Stories
-
-![Gameplay Screenshot](/path/to/screenshot.png)
 
 - As a player, I want to be able to play the Pong game on various devices, including mobile, tablet, and desktop, to ensure a seamless gaming experience.
 - The game plays slightly different on mobile or tablet as the user has to tap where they want to paddle, but this is just as playable as the PC version.
@@ -34,7 +32,7 @@
 ## Features
 
 ### Homepage
-
+![Mockup](assets/homepage.png)
 - The homepage is the only page of the website, it features the header, game arena, paddles, ball, start button and footer.
 
 ### Footer
@@ -50,7 +48,7 @@
 
 ### Modal
 
-- A modal is displayed at the end of the game to announce the game result.
+- A modal is displayed at the end of the game to announce the game result, this gives the player a sense of achievement if they win, or a drive to do better if they lose.
 
 ### Start Button
 
@@ -76,6 +74,9 @@
 - CSS: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 - JS: [JSHint](https://jshint.com/)
 - The code passed all of these scans with no errors or offers of improvement.
+![Mockup](assets/css.check.png)
+![Mockup](assets/html.check.png)
+![Mockup](assets/JSHint.png)
 
 ### Lighthouse
 
