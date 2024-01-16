@@ -1,6 +1,7 @@
 # Pong Game
 ![Mockup](assets/mockup.png)
 
+[Link to live project](https://kittydig.github.io/portfolio_2/)
 ## Table of Contents
 1. [User Experience](#user-experience)
    - [User Stories](#user-stories)
