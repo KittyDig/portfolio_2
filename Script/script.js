@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
     gameTimer = setInterval(updateGame, 16);
   }
 
-  //function to make the game run as it should
+  /** function to make the game run as it should
+   */
   function updateGame() {
     movePaddles();
     moveBall();
@@ -55,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
     updateTimer();
   }
 
-  //function for moving both paddles
+  /** function for moving both paddles
+   */
   function movePaddles() {
     //move the users left paddle based on mouse position
     document.addEventListener("mousemove", function (event) {
@@ -79,13 +81,15 @@ document.addEventListener("DOMContentLoaded", function () {
     updatePaddlePosition();
   }
 
-  //function to update the paddle position
+  /** function to update the paddle position
+   */
   function updatePaddlePosition() {
     paddle1.style.top = paddle1Y + "px";
     paddle2.style.top = paddle2Y + "px";
   }
 
-  //function to move the ball
+  /** function to move the ball
+   */
   function moveBall() {
     //updates the balls speed based on its position
     ballX += ballSpeedX;
@@ -110,6 +114,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  /** function to check collision
+   */
   function checkCollision() {
     //checks collision with the top and bottom walls
     if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
@@ -129,13 +135,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //function to make game harder for the player
+  /** function to make the game harder for the player
+   */
   function increaseSpeed() {
     ballSpeedX *= 1.4;
     paddle2Speed *= 1.25;
   }
 
-  //function to update scores
+  /** function to update scores
+   */
   function updateScore(player) {
     if (player === 1) {
       player1Score.innerText = parseInt(player1Score.innerText) + 1;
@@ -152,7 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //function to end the game
+  /** function to display a modal
+   */
   function displayModal(message) {
     const modal = document.getElementById("myModal");
     const modalMessage = document.getElementById("modalMessage");
@@ -160,13 +169,15 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "block";
   }
 
-  //function to close the modal
+  /** function to close the modal
+   */
   function closeModal() {
     const modal = document.getElementById("myModal");
     modal.style.display = "none";
   }
 
-  //function to end the game
+  /** function to end the game
+   */
   function endGame() {
     clearInterval(gameTimer);
     seconds = 0;
@@ -187,7 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lastUpdateTime = new Date().getTime();
 
-  //function to update the timer
+  /**function to update the timer
+   */
   function updateTimer() {
     const currentTime = new Date().getTime();
     if (currentTime - lastUpdateTime >= 1000) {
@@ -196,7 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
       lastUpdateTime = currentTime;
     }
   }
-
+  /** function to clamp a value between a minimum and maximum
+   */
   function clamp(value, min, max) {
     return Math.min(Math.max(value, min), max);
   }
