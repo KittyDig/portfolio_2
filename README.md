@@ -64,7 +64,7 @@
 
 - List any known bugs or issues that are yet to be fixed.
 
-## Deployment
+## Deployment    
 
 - Deployed the game to a hosting platform.
 
