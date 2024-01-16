@@ -1,5 +1,34 @@
 # Pong Game
 ![Mockup](assets/mockup.png)
+
+## Table of Contents
+1. [User Experience](#user-experience)
+   - [User Stories](#user-stories)
+   - [Installation](#installation)
+2. [Design](#design)
+   - [Colors](#colors)
+   - [Design Inspiration](#design-inspiration)
+3. [Features](#features)
+   - [Homepage](#homepage)
+   - [Footer](#footer)
+   - [Gameplay](#gameplay)
+   - [Modal](#modal)
+   - [Start Button](#start-button)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+   - [User Testing](#user-testing)
+   - [Validator](#validator)
+   - [Lighthouse](#lighthouse)
+   - [Accessibility](#accessibility)
+6. [Bugs/Issues](#bugsissues)
+   - [Fixed](#fixed)
+   - [Unfixed](#unfixed)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+   - [Design](#design-credits)
+   - [JavaScript](#javascript-credits)
+9. [Acknowledgements](#acknowledgements)
+
 ## User Experience
 
 ### User Stories
@@ -80,7 +109,8 @@
 
 ### Lighthouse
 
-- Conducted Lighthouse audits for performance, accessibility, SEO, and best practices.
+- Conducted Lighthouse audits for performance, accessibility, SEO, and best practices and I got at least 95 in all areas.
+![Mockup](assets/lighthouse.png)
 
 ### Accessibility
 
