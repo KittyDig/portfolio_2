@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //sets the initial ball position
     ballX = 400;
-    ballY = Math.random() * 400;
+    ballY = Math.random() * 360;
 
     //sets initial paddle positions
     paddle1Y = 80;
