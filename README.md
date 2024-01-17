@@ -124,6 +124,7 @@
 
 - I dealt with quite a few bugs during this process, mainly to do with collision and the size of the arena. When the arena was resized, it would hit an invisible line in the middle of the arena.
 - I began the project with an arena size of 400px x 200px, this led to great difficulty when readjusting for a larger arena as there was a line of code I kept overlooking 'if (ballX < 0 || ballX + ball.clientWidth > 800)'. When I realised this line was causing the issues, it was a great relief and this bug was fixed.
+- There was a bug that caused the ball to run along either the top or bottom of the arena if the ball spawned either too low or too high on the arena. This was fixed by adjusting the range the ballY could appear in.
 
 ### Unfixed
 
