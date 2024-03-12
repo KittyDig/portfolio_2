@@ -132,7 +132,7 @@ footer p {
   margin: 0;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 935px) {
   #score-container {
     font-size: 12px;
   }
@@ -149,14 +149,14 @@ footer p {
   }
 
   #ball {
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
   }
 
   #paddle1,
   #paddle2 {
-    width: 12px;
-    height: 30px;
+    width: 18px;
+    height: 55px;
   }
 
   #score-container {
@@ -174,7 +174,7 @@ footer p {
   #player1-score {
     margin-left: 30%;
   }
-  
+
   header {
     background-color: #c9ada7;
     color: #22223b;
