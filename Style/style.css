@@ -15,7 +15,6 @@ header {
   padding: 20px;
   margin-bottom: 20px;
   font-size: 2rem;
-  border-radius: 40px;
   width: 100%;
 }
 
@@ -131,4 +130,26 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  #score-container {
+    font-size: 12px;
+  }
+
+  #player2-score,
+  #player1-score {
+    margin: 0;
+  }
+
+  #game-container {
+    width: 90%;
+    max-width: none;
+    height: 150px;
+  }
+
+  #ball {
+    width: 8px;
+    height: 8px;
+  }
 }
