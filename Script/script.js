@@ -120,7 +120,8 @@ const gameContainer = document.getElementById("game-container");
     ball.style.top = ballY + "px";
 
     //check if the ball goes beyond the paddles, and if it does, add a point to the respective player
-    if (ballX < 0 || ballX + ball.clientWidth > 800) {
+    if (screenWidth < 950) {
+    if (ballX < 0 || ballX + ball.clientWidth > 835) {
       if (ballX < 0) {
         //update player 2 score
         updateScore(2);
@@ -128,9 +129,23 @@ const gameContainer = document.getElementById("game-container");
         //update player 1 score
         updateScore(1);
       }
+            //resets ball position after a goal is scored
+            ballX = 400;
+            ballY = Math.random() * 180;
+          }
+    } else {
+      if (ballX < 0 || ballX + ball.clientWidth > 800) {
+        if (ballX < 0) {
+          //update player 2 score
+          updateScore(2);
+        } else {
+          //update player 1 score
+          updateScore(1);
+        }
+    }
       //resets ball position after a goal is scored
       ballX = 400;
-      ballY = Math.random() * 400;
+      ballY = Math.random() * 180;
     }
   }
 
@@ -139,7 +154,7 @@ const gameContainer = document.getElementById("game-container");
   function checkCollision() {
     //checks collision with the top and bottom walls
     if (screenWidth < 950) {
-    if (ballY <= 0 || ballY + ball.clientHeight >= 180) {
+    if (ballY <= 0 || ballY + ball.clientHeight >= 190) {
       ballSpeedY = -ballSpeedY;
     }
   } else {
