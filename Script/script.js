@@ -47,7 +47,7 @@ const gameContainer = document.getElementById("game-container");
 
     //sets the initial ball position
 
-    if (screenWidth < 935) {
+    if (screenWidth < 950) {
       // ball position for smaller screen sizes
       ballX = gameContainer.clientWidth / 2;
       ballY = screenHeight / 5;
@@ -138,7 +138,7 @@ const gameContainer = document.getElementById("game-container");
    */
   function checkCollision() {
     //checks collision with the top and bottom walls
-    if (screenWidth > 935) {
+    if (screenWidth < 950) {
     if (ballY <= 0 || ballY + ball.clientHeight >= 180) {
       ballSpeedY = -ballSpeedY;
     }
@@ -147,6 +147,7 @@ const gameContainer = document.getElementById("game-container");
       ballSpeedY = -ballSpeedY;
   }
 }
+console.log('Screen Width:', screenWidth);
 
     //checks collision with the paddles
     if (
