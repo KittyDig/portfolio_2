@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let paddle2Y = 80;
   let paddle2Speed = 1;
 
+  const screenWidth =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+const screenHeight =
+  window.innerHeight ||
+  document.documentElement.clientHeight ||
+  document.body.clientHeight;
+const gameContainer = document.getElementById("game-container");
+
   //event listener for the start button
   document.getElementById("startButton").addEventListener("click", startGame);
 
@@ -36,12 +46,22 @@ document.addEventListener("DOMContentLoaded", function () {
     paddle2Speed = 1;
 
     //sets the initial ball position
-    ballX = 400;
-    ballY = Math.random() * 360;
 
-    //sets initial paddle positions
-    paddle1Y = 80;
-    paddle2Y = 80;
+    if (screenWidth < 935) {
+      // ball position for smaller screen sizes
+      ballX = gameContainer.clientWidth / 2;
+      ballY = screenHeight / 5;
+
+      paddle1Y = screenHeight / 4 - paddle1.clientHeight / 4;
+      paddle2Y = screenHeight / 4 - paddle2.clientHeight / 4;
+    } else {
+      // ball position for larger screen sizes
+      ballX = 400;
+      ballY = Math.random() * (gameContainer.clientHeight - 40) + 20;
+
+      paddle1Y = 80;
+      paddle2Y = 80;
+    }
 
     //calls the function to initiate the game
     gameTimer = setInterval(updateGame, 16);
@@ -118,9 +138,15 @@ document.addEventListener("DOMContentLoaded", function () {
    */
   function checkCollision() {
     //checks collision with the top and bottom walls
-    if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
+    if (screenWidth > 935) {
+    if (ballY <= 0 || ballY + ball.clientHeight >= 180) {
       ballSpeedY = -ballSpeedY;
     }
+  } else {
+    if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
+      ballSpeedY = -ballSpeedY;
+  }
+}
 
     //checks collision with the paddles
     if (
