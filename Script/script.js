@@ -166,6 +166,18 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Screen Width:", screenWidth);
 
     //checks collision with the paddles
+    if (screenWidth < 950) {
+    if (
+      (ballX <= 20 &&
+        ballY >= paddle1Y &&
+        ballY <= paddle1Y + paddle1.clientHeight) ||
+      (ballX + ball.clientWidth >= 820 &&
+        ballY >= paddle2Y &&
+        ballY <= paddle2Y + paddle2.clientHeight)
+    ) {
+      ballSpeedX = -ballSpeedX;
+    }
+  } else {
     if (
       (ballX <= 20 &&
         ballY >= paddle1Y &&
@@ -176,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
       ballSpeedX = -ballSpeedX;
     }
+  }
   }
 
   /** function to make the game harder for the player
