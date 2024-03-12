@@ -145,11 +145,43 @@ footer p {
   #game-container {
     width: 90%;
     max-width: none;
-    height: 150px;
+    height: 12rem;
   }
 
   #ball {
     width: 8px;
     height: 8px;
+  }
+
+  #paddle1,
+  #paddle2 {
+    width: 12px;
+    height: 30px;
+  }
+
+  #score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #player2-score {
+    margin-right: 30%;
+  }
+
+  #player1-score {
+    margin-left: 30%;
+  }
+  
+  header {
+    background-color: #c9ada7;
+    color: #22223b;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    width: 100%;
   }
 }
