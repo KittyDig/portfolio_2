@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
   let paddle2Speed = 1;
 
   const screenWidth =
-  window.innerWidth ||
-  document.documentElement.clientWidth ||
-  document.body.clientWidth;
-const screenHeight =
-  window.innerHeight ||
-  document.documentElement.clientHeight ||
-  document.body.clientHeight;
-const gameContainer = document.getElementById("game-container");
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  const screenHeight =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+  const gameContainer = document.getElementById("game-container");
 
   //event listener for the start button
   document.getElementById("startButton").addEventListener("click", startGame);
@@ -121,18 +121,18 @@ const gameContainer = document.getElementById("game-container");
 
     //check if the ball goes beyond the paddles, and if it does, add a point to the respective player
     if (screenWidth < 950) {
-    if (ballX < 0 || ballX + ball.clientWidth > 835) {
-      if (ballX < 0) {
-        //update player 2 score
-        updateScore(2);
-      } else {
-        //update player 1 score
-        updateScore(1);
+      if (ballX < 0 || ballX + ball.clientWidth > 835) {
+        if (ballX < 0) {
+          //update player 2 score
+          updateScore(2);
+        } else {
+          //update player 1 score
+          updateScore(1);
+        }
+        //resets ball position after a goal is scored
+        ballX = 400;
+        ballY = Math.random() * 180;
       }
-            //resets ball position after a goal is scored
-            ballX = 400;
-            ballY = Math.random() * 180;
-          }
     } else {
       if (ballX < 0 || ballX + ball.clientWidth > 800) {
         if (ballX < 0) {
@@ -142,10 +142,11 @@ const gameContainer = document.getElementById("game-container");
           //update player 1 score
           updateScore(1);
         }
-    }
-      //resets ball position after a goal is scored
-      ballX = 400;
-      ballY = Math.random() * 180;
+  
+        //resets ball position after a goal is scored
+        ballX = 400;
+        ballY = Math.random() * 400;
+      }
     }
   }
 
@@ -154,15 +155,15 @@ const gameContainer = document.getElementById("game-container");
   function checkCollision() {
     //checks collision with the top and bottom walls
     if (screenWidth < 950) {
-    if (ballY <= 0 || ballY + ball.clientHeight >= 190) {
-      ballSpeedY = -ballSpeedY;
+      if (ballY <= 0 || ballY + ball.clientHeight >= 190) {
+        ballSpeedY = -ballSpeedY;
+      }
+    } else {
+      if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
+        ballSpeedY = -ballSpeedY;
+      }
     }
-  } else {
-    if (ballY <= 0 || ballY + ball.clientHeight >= 400) {
-      ballSpeedY = -ballSpeedY;
-  }
-}
-console.log('Screen Width:', screenWidth);
+    console.log("Screen Width:", screenWidth);
 
     //checks collision with the paddles
     if (
