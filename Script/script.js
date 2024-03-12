@@ -90,7 +90,22 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-    //move the right paddle automatically depending on where the ball is.
+      //moves the user's left paddle based on touch position
+    document.addEventListener("touchmove", function (event) {
+      //prevent default to avoid scrolling on touch devices
+      event.preventDefault();
+
+      //gets the touch position relative to the game container
+      const touchY =
+        event.touches[0].clientY -
+        document.getElementById("game-container").offsetTop -
+        paddle1.clientHeight / 2;
+
+      //updates paddle position
+      paddle1Y = clamp(touchY, 0, 400 - paddle1.clientHeight);
+    });
+
+    //moves the right paddle automatically depending on where the ball is
     if (ballSpeedX > 0) {
       if (ballY < paddle2Y + paddle2.clientHeight / 2) {
         paddle2Y -= paddle2Speed;
@@ -270,3 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return Math.min(Math.max(value, min), max);
   }
 });
+
+// https://stackoverflow.com/questions/10814838/document-addeventlistenertouchmove-preventbehavior-false-prevents-me-us used to
+// add touch-screen controls to the game
