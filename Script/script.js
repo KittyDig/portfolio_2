@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         paddle1.clientHeight / 2;
 
       //updates paddle position
-      paddle1Y = clamp(touchY, 0, 400 - paddle1.clientHeight);
+      paddle1Y = clamp(touchY, 0, gameContainer.clientHeight - paddle1.clientHeight);
     });
 
     function clamp(value, min, max) {
