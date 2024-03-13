@@ -132,6 +132,19 @@ footer p {
   margin: 0;
 }
 
+#instructionsPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 @media only screen and (max-width: 935px) {
   #score-container {
     font-size: 12px;
