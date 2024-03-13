@@ -184,4 +184,7 @@ footer p {
     font-size: 0.8rem;
     width: 100%;
   }
+  footer {
+    display: none
+  }
 }
