@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       paddle1Y = (screenHeight / 4 - paddle1.clientHeight / 4) * 0.01;
       paddle2Y = (screenHeight / 4 - paddle2.clientHeight / 4) * 0.01;
-    } if (screenWidth < 450) {
+    }
+    if (screenWidth < 450) {
       // ball position for smaller screen sizes
       ballX = (screenWidth / 2) * 0.5;
       ballY = (screenHeight / 5) * 0.5;
@@ -111,7 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
         paddle1.clientHeight / 2;
 
       //updates paddle position
-      paddle1Y = clamp(touchY, 0, gameContainer.clientHeight - paddle1.clientHeight);
+      paddle1Y = clamp(
+        touchY,
+        0,
+        gameContainer.clientHeight - paddle1.clientHeight
+      );
     });
 
     function clamp(value, min, max) {
@@ -299,5 +304,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// https://stackoverflow.com/questions/10814838/document-addeventlistenertouchmove-preventbehavior-false-prevents-me-us used to
-// add touch-screen controls to the game
+//references:
+//https://www.geeksforgeeks.org/pong-game-in-javascript/ This site helped me with the collision and random ball placement.
+//https://gist.github.com/straker/81b59eecf70da93af396f963596dfdc5 I used this site to know how to create & draw the canvas and how to setup the paddle.
+//https://codepen.io/gdube/pen/JybxxZ Helped with the collision physics and implementing the game loop, game state, including checking for game over conditions.
+//https://javascript.plainenglish.io/js-tutorial-create-a-ping-pong-game-bc92c9f3011a This site helped me to understand the ball speed and the ball randomness.
+//https://medium.com/@muzammal3150/creation-of-ping-pong-game-in-javascript-with-explanation-57a783d8400 Helped with the collision physics and the game loop.
+//https://codereview.stackexchange.com/questions/172604/classing-pong-game Helped to improve the collision on the paddles.
+//https://stackoverflow.com/questions/10814838/document-addeventlistenertouchmove-preventbehavior-false-prevents-me-us Used to help create the touchscreen controls.

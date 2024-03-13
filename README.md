@@ -25,6 +25,8 @@
    - [Fixed](#fixed)
    - [Unfixed](#unfixed)
 7. [Deployment](#deployment)
+   - [Github Pages](#github-pages)
+   - [Local Deployment](#local-deployment)
 8. [Credits](#credits)
    - [Design](#design-credits)
    - [JavaScript](#javascript-credits)
@@ -135,7 +137,33 @@
 
 ## Deployment
 
-- Deployed the game to github pages, https://kittydig.github.io/portfolio_2/
+### GitHub Pages
+
+The game has been deployed to GitHub Pages and can be accessed [here](https://kittydig.github.io/portfolio_2/).
+
+### Local Deployment
+
+To deploy the game locally and run it on your machine, follow these steps:
+
+1. **Clone the Repository:**
+   - Open your terminal.
+   - Navigate to the directory where you want to clone the repository.
+   - Run the following command to clone the repository:
+
+     ```bash
+     git clone https://github.com/kittydig/portfolio_2.git
+     ```
+
+2. **Open the Project:**
+   - Navigate into the cloned project's directory:
+
+     ```bash
+     cd portfolio_2
+     ```
+
+3. **Open in Browser:**
+   - Locate the `index.html` file in the project directory.
+   - Open the `index.html` file in your web browser.
 
 ## Credits
 
@@ -152,6 +180,7 @@
 - [JavaScript Plain English](https://javascript.plainenglish.io/js-tutorial-create-a-ping-pong-game-bc92c9f3011a): Tutorial used for creating the pong game in JavaScript.
 - [Medium Tutorial](https://medium.com/@muzammal3150/creation-of-ping-pong-game-in-javascript-with-explanation-57a783d8400): Tutorial for creating a pong game with explanations.
 - [Stackexchange](https://codereview.stackexchange.com/questions/172604/classing-pong-game): Question on how to improve pong game.
+- [Stackoverflow](https://stackoverflow.com/questions/10814838/document-addeventlistenertouchmove-preventbehavior-false-prevents-me-us): Used to help create the touchscreen controls.
 
 
 ## Acknowledgements
