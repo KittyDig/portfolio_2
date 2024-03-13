@@ -90,8 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
+      //gets the element reference for the paddle
+      const paddle1 = document.getElementById("paddle1");
+      
       //moves the user's left paddle based on touch position
-    document.addEventListener("touchmove", function (event) {
+      paddle1.addEventListener("touchmove", function (event) {
       //prevent default to avoid scrolling on touch devices
       event.preventDefault();
 
@@ -104,6 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
       //updates paddle position
       paddle1Y = clamp(touchY, 0, 400 - paddle1.clientHeight);
     });
+    
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
 
     //moves the right paddle automatically depending on where the ball is
     if (ballSpeedX > 0) {
