@@ -74,13 +74,14 @@
 ### Gameplay
 
 - The game includes a pong game interface with paddles, a ball, and a scoring system.
-- The paddles are controlled by the users mouse in the PC version, and by tapping the screen on the tablet and mobile version.
+- The paddles are controlled by the users mouse in the PC version, and by tapping or scrolling the paddle on the tablet and mobile version.
 - The right paddle is computer operated, following the ball, rather than being a generic up and down defence system, which makes the game slightly more difficult.
 - The game gets increasingly difficult for the player if they score a point by speeding up the ball and the right paddle, the game difficulty does not change if the computer scores a point.
 
 ### Modal
 
 - A modal is displayed at the end of the game to announce the game result, this gives the player a sense of achievement if they win, or a drive to do better if they lose.
+- There is also a modal that pops up at the beginning of the game that gives the user instructions on how to play the game.
 
 ### Start Button
 
@@ -99,6 +100,7 @@
 
 - Conducted user testing with my cousin, who played the game on an iPad. The game was successfully played on mobile, tablet, and desktop, ensuring a versatile user experience.
 - She enjoyed the game and found it to not be too difficult, but it had enough challenge for her to play a few rounds of the game.
+- A popup was added that gives the user instructions on how to play the game.
 
 ### Validator
 
