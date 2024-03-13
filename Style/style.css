@@ -139,8 +139,9 @@ footer p {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: #c9ada7; /* Match the background color of the header */
+  color: #22223b; /* Match the text color of the header */
+  border: 2px solid #22223b; /* Match the border color of the header */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   text-align: center;
 }

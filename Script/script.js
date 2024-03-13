@@ -32,6 +32,18 @@ document.addEventListener("DOMContentLoaded", function () {
   //event listener for the start button
   document.getElementById("startButton").addEventListener("click", startGame);
 
+    //event listener for the start game button in the popup
+    document.getElementById("startGameButton").addEventListener("click", function () {
+      //hides the instructions popup
+      document.getElementById("instructionsPopup").style.display = "none";
+  
+      //starts the game (call your existing startGame function)
+      startGame();
+    });
+  
+    //shows the instructions popup when the page loads
+    document.getElementById("instructionsPopup").style.display = "block";
+
   /**functions
    *function to start the game
    */
