@@ -135,7 +135,8 @@
 
 ### Unfixed
 
--There is a bug that can occur if the ball hits the paddle at a very certain angle. The ball jitters along the paddle then bounces off the paddle. I did not have enough time to delve further into this bug so it has not yet been fixed but I would like to spend more time on this project and find out how to fix this.
+- There is a bug that can occur if the ball hits the paddle at a very certain angle. The ball jitters along the paddle then bounces off the paddle. I did not have enough time to delve further into this bug so it has not yet been fixed but I would like to spend more time on this project and find out how to fix this.
+- There is a bug that happens rarely and seemingly randomly on mobile devices where the ball stops in the centre of the arena and bounces back to the player, this can be resolved by refreshing the page and it does not appear again during this session.
 
 ## Deployment
 
