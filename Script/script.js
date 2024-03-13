@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       paddle1Y = (screenHeight / 4 - paddle1.clientHeight / 4) * 0.01;
       paddle2Y = (screenHeight / 4 - paddle2.clientHeight / 4) * 0.01;
+    } if (screenWidth < 450) {
+      // ball position for smaller screen sizes
+      ballX = (screenWidth / 2) * 0.5;
+      ballY = (screenHeight / 5) * 0.5;
+
+      paddle1Y = (screenHeight / 4 - paddle1.clientHeight / 4) * 0.01;
+      paddle2Y = (screenHeight / 4 - paddle2.clientHeight / 4) * 0.01;
     } else {
       // ball position for larger screen sizes
       ballX = 400;
@@ -151,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
           updateScore(1);
         }
         //resets ball position after a goal is scored
-        ballX = 400;
+        ballX = screenWidth * 0.5;
         ballY = Math.random() * 180;
       }
     } else {
