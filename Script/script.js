@@ -49,20 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (screenWidth < 950) {
       // ball position for smaller screen sizes
-      ballX = gameContainer.clientWidth / 2;
-      ballY = screenHeight / 5;
+      ballX = (screenWidth / 2) * 0.8;
+      ballY = (screenHeight / 5) * 0.9;
 
-      paddle1Y = screenHeight / 4 - paddle1.clientHeight / 4;
-      paddle2Y = screenHeight / 4 - paddle2.clientHeight / 4;
+      paddle1Y = (screenHeight / 4 - paddle1.clientHeight / 4) * 0.01;
+      paddle2Y = (screenHeight / 4 - paddle2.clientHeight / 4) * 0.01;
     } else {
       // ball position for larger screen sizes
       ballX = 400;
       ballY = Math.random() * (gameContainer.clientHeight - 40) + 20;
 
-      paddle1Y = 80;
-      paddle2Y = 80;
+      paddle1Y = 80 * 0.01;
+      paddle2Y = 80 * 0.01;
     }
-
     //calls the function to initiate the game
     gameTimer = setInterval(updateGame, 16);
   }
@@ -90,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     });
 
-      //gets the element reference for the paddle
-      const paddle1 = document.getElementById("paddle1");
-      
-      //moves the user's left paddle based on touch position
-      paddle1.addEventListener("touchmove", function (event) {
+    //gets the element reference for the paddle
+    const paddle1 = document.getElementById("paddle1");
+
+    //moves the user's left paddle based on touch position
+    paddle1.addEventListener("touchmove", function (event) {
       //prevent default to avoid scrolling on touch devices
       event.preventDefault();
 
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //updates paddle position
       paddle1Y = clamp(touchY, 0, 400 - paddle1.clientHeight);
     });
-    
+
     function clamp(value, min, max) {
       return Math.min(Math.max(value, min), max);
     }
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //check if the ball goes beyond the paddles, and if it does, add a point to the respective player
     if (screenWidth < 950) {
-      if (ballX < 0 || ballX + ball.clientWidth > 835) {
+      if (ballX < 0 || ballX + ball.clientWidth > screenWidth * 0.9) {
         if (ballX < 0) {
           //update player 2 score
           updateScore(2);
@@ -164,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
           //update player 1 score
           updateScore(1);
         }
-  
+
         //resets ball position after a goal is scored
         ballX = 400;
         ballY = Math.random() * 400;
@@ -189,28 +188,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //checks collision with the paddles
     if (screenWidth < 950) {
-    if (
-      (ballX <= 20 &&
-        ballY >= paddle1Y &&
-        ballY <= paddle1Y + paddle1.clientHeight) ||
-      (ballX + ball.clientWidth >= 820 &&
-        ballY >= paddle2Y &&
-        ballY <= paddle2Y + paddle2.clientHeight)
-    ) {
-      ballSpeedX = -ballSpeedX;
+      if (
+        (ballX <= 20 &&
+          ballY >= paddle1Y &&
+          ballY <= paddle1Y + paddle1.clientHeight) ||
+        (ballX + ball.clientWidth >= screenWidth * 0.86 &&
+          ballY >= paddle2Y &&
+          ballY <= paddle2Y + paddle2.clientHeight)
+      ) {
+        ballSpeedX = -ballSpeedX;
+      }
+    } else {
+      if (
+        (ballX <= 20 &&
+          ballY >= paddle1Y &&
+          ballY <= paddle1Y + paddle1.clientHeight) ||
+        (ballX + ball.clientWidth >= 780 &&
+          ballY >= paddle2Y &&
+          ballY <= paddle2Y + paddle2.clientHeight)
+      ) {
+        ballSpeedX = -ballSpeedX;
+      }
     }
-  } else {
-    if (
-      (ballX <= 20 &&
-        ballY >= paddle1Y &&
-        ballY <= paddle1Y + paddle1.clientHeight) ||
-      (ballX + ball.clientWidth >= 780 &&
-        ballY >= paddle2Y &&
-        ballY <= paddle2Y + paddle2.clientHeight)
-    ) {
-      ballSpeedX = -ballSpeedX;
-    }
-  }
   }
 
   /** function to make the game harder for the player
