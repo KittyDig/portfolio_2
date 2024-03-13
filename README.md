@@ -110,7 +110,7 @@
 
 ### Lighthouse
 
-- Conducted Lighthouse audits for performance, accessibility, SEO, and best practices and I got at least 95 in all areas.
+- Conducted Lighthouse audits for performance, accessibility, SEO, and best practices and I got 100 in all areas, in both desktop and mobile versions.
 ![Mockup](assets/lighthouse.png)
 
 ### Accessibility
@@ -125,6 +125,9 @@
 - I dealt with quite a few bugs during this process, mainly to do with collision and the size of the arena. When the arena was resized, it would hit an invisible line in the middle of the arena.
 - I began the project with an arena size of 400px x 200px, this led to great difficulty when readjusting for a larger arena as there was a line of code I kept overlooking 'if (ballX < 0 || ballX + ball.clientWidth > 800)'. When I realised this line was causing the issues, it was a great relief and this bug was fixed.
 - There was a bug that caused the ball to run along either the top or bottom of the arena if the ball spawned either too low or too high on the arena. This was fixed by adjusting the range the ballY could appear in.
+- When fixing the game to work on smaller screens, I ran into quite a few issues, including:
+- The touch screen controls clipping below the arena, this was fixed by changing the arena sizing by pixels to gameContainer.clientHeight - paddle1.clientHeight.
+- The responsive arena sizing was quite difficult for me to grasp, but after a few failed attempts, I understood how to correctly us the screenWidth class.
 
 ### Unfixed
 
